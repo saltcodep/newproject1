@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 //     return $num1 + $num2;
 // });
 
-// Route::get("/showdetail/{name}/{age}/{text}", function ($name, $age, $text){
+// Route::get("/showdetail/{name}/{age}/{text}", function ($name, $age, $texst){
 //     return "สวัสดี, $name คุณมีอายุ $age ปี และคุณพูดว่า '$text'";
 // });
 
@@ -36,3 +36,8 @@ Route::get('/บวกเลข/{number1}/{number2}/{number3}', 'HomeController@
 Route::get('/', 'UserController@index');
 Route::get('/user/show/{id}', 'UserController@show');
 Route::get('/user/update/{id}', 'UserController@update');
+
+Route::get('/todo', "Todocontroller@index");
+Route::get('/todo/show/{id}', 'Todocontroller@show');
+Route::get('/todo/delete/{id}', 'Todocontroller@delete');
+
